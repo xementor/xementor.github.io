@@ -1,5 +1,13 @@
 <script>
 	import Menu from "./Menu.svelte"
+
+	let isDarkTheme = false
+
+	function toggle() {
+		isDarkTheme = !isDarkTheme // Toggle the theme state
+		const theme = isDarkTheme ? "dark" : "light"
+		window.document.body.setAttribute("data-theme", theme)
+	}
 </script>
 
 <div class="navbar bg-base-100">
@@ -27,7 +35,7 @@
 				<Menu />
 			</div>
 		</div>
-		<a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+		<a class="btn btn-ghost normal-case text-xl">IH Zonaid</a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<div class="menu menu-horizontal px-1">
@@ -50,23 +58,34 @@
 				/></svg
 			>
 		</button>
-		<button class="btn btn-ghost btn-circle">
-			<div class="indicator">
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					class="h-5 w-5"
-					fill="none"
-					viewBox="0 0 24 24"
-					stroke="currentColor"
-					><path
-						stroke-linecap="round"
-						stroke-linejoin="round"
-						stroke-width="2"
-						d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"
-					/></svg
-				>
-				<span class="badge badge-xs badge-primary indicator-item" />
-			</div>
-		</button>
+
+		<div class="dropdown dropdown-end dropdown-hover">
+			<button class="btn btn-ghost btn-circle" on:click={toggle}>
+				<div class="indicator">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+						/>
+					</svg>
+				</div>
+			</button>
+			<ul
+				tabindex="0"
+				class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+			>
+				<li><a>Light</a></li>
+				<li><a>Dark</a></li>
+				<li><a>Dracula</a></li>
+			</ul>
+		</div>
 	</div>
 </div>

@@ -1,4 +1,4 @@
-<div class="rounded-box sticky bottom-0 inline-block">
+<div class="hidden rounded-box sticky bottom-0 md:inline-block">
 	<div class="flex flex-col items-center">
 		<ul class="menu">
 			<li>
@@ -94,6 +94,6 @@
 				</a>
 			</li>
 		</ul>
-		<div class="w-[1px] h-28 bg-white" />
+		<div class="w-[1px] h-28 bg-base-content" />
 	</div>
 </div>
