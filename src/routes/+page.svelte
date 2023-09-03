@@ -7,8 +7,6 @@
 	import Navbar from "../components/Navbar.svelte"
 	import Project from "../components/Project.svelte"
 	import Work from "../components/Work.svelte"
-
-	let prevScrollPos = 1
 </script>
 
 <div>

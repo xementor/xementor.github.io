@@ -3,7 +3,7 @@
 		<div class="">
 			<p class="text-lg font-semibold">Hi, I'm</p>
 			<h1 class="text-7xl font-bold py-5">Md. Zonaid</h1>
-			<h1 class="text-5xl font-bold">I'm build software for cross platform.</h1>
+			<h1 class="text-5xl font-bold">I build software for cross platform.</h1>
 			<p class="py-6 text-lg max-w-md">
 				I’m a software engineer specializing in building (and occasionally
 				designing) exceptional digital experiences. Currently, I’m focused on

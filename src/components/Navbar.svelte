@@ -3,17 +3,38 @@
 	import { onMount } from "svelte"
 
 	let isDarkTheme = false
+	let canHideNavbar = false
+
+	let prevScrollpos = window.pageYOffset
 
 	function toggle() {
 		isDarkTheme = !isDarkTheme // Toggle the theme state
 		const theme = isDarkTheme ? "dark" : "light"
 		window.document.body.setAttribute("data-theme", theme)
 	}
+	let top = "0"
 
-	let prevScrollPos = 0
+	onMount(() => {
+		window.onscroll = function () {
+			var currentScrollPos = window.pageYOffset
+			if (prevScrollpos > currentScrollPos) {
+				top = "0"
+				canHideNavbar = false
+			} else {
+				top = "-50px"
+				canHideNavbar = true
+			}
+			prevScrollpos = currentScrollPos
+		}
+	})
 </script>
 
-<div class="navbar bg-base-100" id="navbar">
+<div
+	class="navbar bg-base-100 sticky top-0 z-10 top shadow-sm"
+	id="navbar"
+	class:top-0={!canHideNavbar}
+	class:top[-100px]={canHideNavbar}
+>
 	<div class="navbar-start">
 		<div class="dropdown">
 			<label tabindex="0" class="btn btn-ghost lg:hidden">
