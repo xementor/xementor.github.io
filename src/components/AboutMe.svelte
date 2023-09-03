@@ -30,7 +30,7 @@
 
 			<button class="btn btn-primary">Get Started</button>
 		</div>
-		<div class="self-start mt-24">
+		<div class="md:self-start mt-10 md:mt-24">
 			<img
 				src="ih.jpg"
 				class="max-w-[250px] rounded-lg shadow-2xl justify-start"

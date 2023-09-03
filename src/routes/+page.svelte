@@ -7,14 +7,18 @@
 	import Navbar from "../components/Navbar.svelte"
 	import Project from "../components/Project.svelte"
 	import Work from "../components/Work.svelte"
+
+	let prevScrollPos = 1
 </script>
 
-<Navbar />
-<div class="md:mx-20">
-	<Hero />
-	<AboutMe />
-	<Work />
-	<Project />
-	<Contact />
+<div>
+	<Navbar />
+	<div class="mx-5 md:mx-20">
+		<Hero />
+		<AboutMe />
+		<Work />
+		<Project />
+		<Contact />
+	</div>
+	<IconMenu />
 </div>
-<IconMenu />

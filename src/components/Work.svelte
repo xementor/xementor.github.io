@@ -1,22 +1,19 @@
-<div class="hero min-h-screen bg-base-400">
+<div class="hero min-h-screen bg-base-400 justify-start md:justify-center">
 	<div class=" p-4">
-		<h2 class="text-4xl font-bold mb-10">Where I've Worked</h2>
+		<h2 class="text-4xl font-bold mb-10">My Work History</h2>
 		<div class="tabs">
-			<a class="tab tab-lifted">Tab 1</a>
-			<a class="tab tab-lifted tab-active">Tab 2</a>
-			<a class="tab tab-lifted">Tab 3</a>
+			<a class="tab tab-lifted tab-active">Action Tokens</a>
+			<a class="tab tab-lifted">Nuna Art Project</a>
 		</div>
-		<div>
-			<h4>Lead Engineer @Upstatment</h4>
-			May 2018 - Present
+		<div class="my-5">
+			<h4 class="text-lg font-bold">Backend Developer</h4>
+			<p class="text-base font-light">May 2018 - Present</p>
+			<ol class="py-2">
+				<li>Builded transection of the steller API</li>
+				<li>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, est.
+				</li>
+			</ol>
 		</div>
-		<ul>
-			<li>
-				1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, est.
-			</li>
-			<li>
-				1. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, est.
-			</li>
-		</ul>
 	</div>
 </div>
