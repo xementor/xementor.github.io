@@ -1,40 +1,31 @@
 <script>
 	import Menu from "./Menu.svelte"
-	import { onMount } from "svelte"
 
 	let isDarkTheme = false
 	let canHideNavbar = false
-
-	let prevScrollpos = window.pageYOffset
+	let prevScrollpos = 0
+	let runnigY = 0
+	$: active_class = canHideNavbar ? "top-[-100px]" : "top-0"
 
 	function toggle() {
 		isDarkTheme = !isDarkTheme // Toggle the theme state
 		const theme = isDarkTheme ? "dark" : "light"
 		window.document.body.setAttribute("data-theme", theme)
 	}
-	let top = "0"
 
-	onMount(() => {
-		window.onscroll = function () {
-			var currentScrollPos = window.pageYOffset
-			if (prevScrollpos > currentScrollPos) {
-				top = "0"
-				canHideNavbar = false
-			} else {
-				top = "-50px"
-				canHideNavbar = true
-			}
-			prevScrollpos = currentScrollPos
+	function handleScroll() {
+		if (prevScrollpos > runnigY) {
+			canHideNavbar = false
+		} else {
+			canHideNavbar = true
 		}
-	})
+		prevScrollpos = runnigY
+	}
 </script>
 
-<div
-	class="navbar bg-base-100 sticky top-0 z-10 top shadow-sm"
-	id="navbar"
-	class:top-0={!canHideNavbar}
-	class:top[-100px]={canHideNavbar}
->
+<svelte:window on:scroll={handleScroll} bind:scrollY={runnigY} />
+
+<div class="navbar bg-base-100 sticky top-0 z-10 top shadow-sm {active_class}">
 	<div class="navbar-start">
 		<div class="dropdown">
 			<label tabindex="0" class="btn btn-ghost lg:hidden">
@@ -67,7 +58,7 @@
 		</div>
 	</div>
 	<div class="navbar-end">
-		<div class="form-control">
+		<div class="hidden sm:form-control">
 			<input
 				type="text"
 				placeholder="Search"
