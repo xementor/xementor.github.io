@@ -1,12 +1,14 @@
 <script lang="ts">
+	import { autoClickedScrolled, canHideNavbar } from "../store/navhide"
 	import Menu from "./Menu.svelte"
 
 	let isDarkTheme = true
-	let canHideNavbar = false
+	// navbarStore.js
+
 	let prevScrollpos = 0
 	let runnigY = 0
 	let theme = ""
-	$: active_class = canHideNavbar ? "top-[-100px]" : "top-0"
+	$: active_class = $canHideNavbar ? "top-[-100px]" : "top-0"
 
 	enum lightThemeName {
 		"light",
@@ -29,10 +31,14 @@
 	}
 
 	function handleScroll() {
-		if (prevScrollpos > runnigY) {
-			canHideNavbar = false
+		if (!$autoClickedScrolled) {
+			if (prevScrollpos > runnigY) {
+				canHideNavbar.set(false)
+			} else {
+				canHideNavbar.set(true)
+			}
 		} else {
-			canHideNavbar = true
+			canHideNavbar.set(true)
 		}
 		prevScrollpos = runnigY
 	}
