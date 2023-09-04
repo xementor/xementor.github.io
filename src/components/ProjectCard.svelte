@@ -1,16 +1,16 @@
 <div class="card w-72 bg-base-100 shadow-xl">
 	<figure>
-		<img src="ih.jpg" alt="Shoes" class="w-96 h-52 object-cover" />
+		<img src="project.jpg" alt="Shoes" class="w-96 h-52 object-cover" />
 	</figure>
 	<div class="card-body">
 		<h2 class="card-title">
-			Shoes!
+			ihABC
 			<div class="badge badge-secondary">NEW</div>
 		</h2>
-		<p>If a dog chews shoes whose shoes does he choose?</p>
+		<p>It is a interactive platform to teach kids alphabet.</p>
 		<div class="card-actions justify-end">
-			<div class="badge badge-outline">Fashion</div>
-			<div class="badge badge-outline">Products</div>
+			<div class="badge badge-outline">solar2D</div>
+			<div class="badge badge-outline">Game</div>
 		</div>
 	</div>
 </div>

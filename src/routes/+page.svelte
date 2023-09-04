@@ -12,11 +12,21 @@
 
 <Navbar />
 <div class="mx-5 md:mx-20">
-	<Hero />
-	<AboutMe />
-	<Work />
-	<Project />
-	<Contact />
+	<section id="section1">
+		<Hero />
+	</section>
+	<section id="section2">
+		<AboutMe />
+	</section>
+	<section id="section3">
+		<Work />
+	</section>
+	<section id="section4">
+		<Project />
+	</section>
+	<section id="section5">
+		<Contact />
+	</section>
 </div>
 <IconMenu />
 <StepMenu />

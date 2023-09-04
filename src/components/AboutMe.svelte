@@ -1,4 +1,4 @@
-<div class="hero min-h-screen">
+<div class="hero min-h-screen" id="section2">
 	<div class="hero-content flex-col md:flex-row max-w-4xl">
 		<div>
 			<h1 class="text-5xl font-bold">About Me</h1>
