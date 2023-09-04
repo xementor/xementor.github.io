@@ -1,5 +1,12 @@
 <script lang="ts">
 	import type { Project } from "$lib"
+	import {
+		Icon,
+		BookmarkSlash,
+		ChatBubbleOvalLeft,
+		HandThumbUp,
+		Share,
+	} from "svelte-hero-icons"
 
 	export let project: Project
 </script>
@@ -13,6 +20,14 @@
 			<img src={project.thumbnail} alt="Shoes" class="w-96 h-52 object-cover" />
 		</figure>
 		<div class="card-body">
+			<div>
+				<div class="avatar">
+					<div class="w-6 rounded-full">
+						<img src="ih.jpg" />
+					</div>
+					<p class="ml-3">Md. Zonaid</p>
+				</div>
+			</div>
 			<h2 class="card-title">
 				{project.app.name}
 				<div class="badge badge-secondary">NEW</div>
@@ -20,9 +35,22 @@
 			<p>
 				{project.desc ? project.desc : "A demo description"}
 			</p>
+			<div>
+				<p class="text-sm font-light">8 min read . Apr 7</p>
+			</div>
 			<div class="card-actions justify-end">
 				<div class="badge badge-outline">solar2D</div>
 				<div class="badge badge-outline">Game</div>
+			</div>
+			<div class="flex flex-row justify-between">
+				<div class="flex flex-row">
+					<Icon src={HandThumbUp} size="20" class="mr-4 hover:fill-primary" />
+					<Icon src={ChatBubbleOvalLeft} size="20" />
+				</div>
+				<div class="flex flex-row">
+					<Icon src={Share} size="20" class="mr-4" />
+					<Icon src={BookmarkSlash} size="20" />
+				</div>
 			</div>
 		</div>
 	</a>

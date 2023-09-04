@@ -1,16 +1,31 @@
-<script>
+<script lang="ts">
 	import Menu from "./Menu.svelte"
 
-	let isDarkTheme = false
+	let isDarkTheme = true
 	let canHideNavbar = false
 	let prevScrollpos = 0
 	let runnigY = 0
+	let theme = ""
 	$: active_class = canHideNavbar ? "top-[-100px]" : "top-0"
+
+	enum lightThemeName {
+		"light",
+		"retro",
+	}
+	enum darkTheme {
+		"dracula",
+		"garden",
+		"dark",
+	}
 
 	function toggle() {
 		isDarkTheme = !isDarkTheme // Toggle the theme state
-		const theme = isDarkTheme ? "dark" : "light"
+		theme = isDarkTheme ? "graden" : "retro"
 		window.document.body.setAttribute("data-theme", theme)
+	}
+	function setTheme(name: string) {
+		theme = name
+		window.document.body.setAttribute("data-theme", name)
 	}
 
 	function handleScroll() {
@@ -28,6 +43,8 @@
 <div class="navbar bg-base-100 sticky top-0 z-10 top shadow-sm {active_class}">
 	<div class="navbar-start">
 		<div class="dropdown">
+			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
+			<!-- svelte-ignore a11y-label-has-associated-control -->
 			<label tabindex="0" class="btn btn-ghost lg:hidden">
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
@@ -43,6 +60,7 @@
 					/></svg
 				>
 			</label>
+			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 			<div
 				tabindex="0"
 				class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
@@ -86,12 +104,13 @@
 				</div>
 			</button>
 			<ul
-				tabindex="0"
 				class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
 			>
-				<li><a>Light</a></li>
-				<li><a>Dark</a></li>
-				<li><a>Dracula</a></li>
+				<li class="btn-active">
+					<button on:click={() => setTheme("light")}>Light</button>
+				</li>
+				<li><button on:click={() => setTheme("dark")}>Dark</button></li>
+				<li><button on:click={() => setTheme("retro")}>Retro</button></li>
 			</ul>
 		</div>
 	</div>

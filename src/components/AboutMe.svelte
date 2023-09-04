@@ -3,32 +3,41 @@
 		<div>
 			<h1 class="text-5xl font-bold">About Me</h1>
 			<p class="pt-6">
-				Hello! My name is Brittany and I enjoy creating things that live on the
-				internet. My interest in web development started back in 2012 when I
-				decided to try editing custom Tumblr themes — turns out hacking together
-				a custom reblog button taught me a lot about HTML & CSS!
+				"Hello there! I'm Md. Zonaid, and I'm passionate about crafting internet
+				products through coding. My journey into the world of coding began in
+				2013 when I gained access to play video games on my Java Nokia mobile
+				phone. Curiosity led me to start searching on Google for ways to build
+				apps and games. At that time, I didn't have access to a laptop, but that
+				didn't stop me. I eventually learned Java and began my journey into
+				Android app development."
 			</p>
 			<p class="pt-6">
-				Fast-forward to today, and I’ve had the privilege of working at an
-				advertising agency, a start-up, a huge corporation, and a student-led
-				design studio. My main focus these days is building accessible,
-				inclusive products and digital experiences at Upstatement for a variety
-				of clients.
+				"Fast-forward to today, and I'm immersed in the world of computer
+				science. I'm currently pursuing a degree in computer science while
+				actively engaging in various web projects. My passion lies in continuous
+				learning and building innovative solutions using technologies like React
+				and React Native. Whether it's web development or mobile applications,
+				I'm dedicated to expanding my knowledge and creating impactful digital
+				experiences."
 			</p>
 
-			<p>
-				I also recently launched a course that covers everything you need to
-				build a web app with the Spotify API using Node & React.
-			</p>
-			<p class="py-6">
-				Here are a few technologies I’ve been working with recently:
-				<li>JavaScript (ES6+)</li>
-				<li>TypeScript</li>
-				<li>React</li>
-				<li>Node.js</li>
-			</p>
-
-			<button class="btn btn-primary">Get Started</button>
+			<div class="py-6">
+				<p>Here are a few technologies I’ve been working with recently:</p>
+				<div class="flex flex-row my-3">
+					<div class="mr-10">
+						<li>JavaScript (ES6+)</li>
+						<li>TypeScript</li>
+						<li>React</li>
+						<li>Next.js</li>
+					</div>
+					<div class="">
+						<li>Python</li>
+						<li>Django</li>
+						<li>Java</li>
+						<li>Flutter(Dart)</li>
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="md:self-start mt-10 md:mt-24">
 			<img

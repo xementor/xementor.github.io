@@ -1,3 +1,6 @@
+<script lang="ts">
+</script>
+
 <ul class="menu bg-base-200 lg:menu-horizontal rounded-box">
 	<li>
 		<a href="/projects">

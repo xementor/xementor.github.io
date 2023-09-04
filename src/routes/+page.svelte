@@ -1,6 +1,7 @@
 <script lang="ts">
 	// Import the MyComponent
 	import AboutMe from "../components/AboutMe.svelte"
+	import Blog from "../components/Blog.svelte"
 	import Contact from "../components/Contact.svelte"
 	import Hero from "../components/Hero.svelte"
 	import IconMenu from "../components/IconMenu.svelte"
@@ -24,6 +25,9 @@
 		<Project />
 	</section>
 	<section id="section5">
+		<Blog />
+	</section>
+	<section id="section6">
 		<Contact />
 	</section>
 </div>
