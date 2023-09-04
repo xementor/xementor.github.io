@@ -1,6 +1,6 @@
 <ul class="menu bg-base-200 lg:menu-horizontal rounded-box">
 	<li>
-		<a>
+		<a href="/projects">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
@@ -20,7 +20,7 @@
 		</a>
 	</li>
 	<li>
-		<a>
+		<a href="/blogs">
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				fill="none"
@@ -41,7 +41,7 @@
 		</a>
 	</li>
 	<li>
-		<a>
+		<a href="#">
 			Resume
 			<span class="badge badge-xs badge-info" />
 		</a>

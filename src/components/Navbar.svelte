@@ -50,7 +50,7 @@
 				<Menu />
 			</div>
 		</div>
-		<a class="btn btn-ghost normal-case text-xl">IH Zonaid</a>
+		<a href="/" class="btn btn-ghost normal-case text-xl">IH Zonaid</a>
 	</div>
 	<div class="navbar-center hidden lg:flex">
 		<div class="menu menu-horizontal px-1">

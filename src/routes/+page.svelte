@@ -10,8 +10,7 @@
 	import Work from "../components/Work.svelte"
 </script>
 
-<Navbar />
-<div class="mx-5 md:mx-20">
+<div>
 	<section id="section1">
 		<Hero />
 	</section>
@@ -28,5 +27,5 @@
 		<Contact />
 	</section>
 </div>
-<IconMenu />
+
 <StepMenu />

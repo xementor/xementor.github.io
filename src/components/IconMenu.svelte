@@ -1,4 +1,4 @@
-<div class="hidden rounded-box sticky bottom-0 md:inline-block">
+<div class="hidden rounded-box fixed bottom-0 md:inline-block">
 	<div class="flex flex-col items-center">
 		<ul class="menu">
 			<li>
