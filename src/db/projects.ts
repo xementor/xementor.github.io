@@ -6,6 +6,8 @@ export const projects: Project[] = [
 		filename: "ihabc.md",
 		thumbnail: "project.jpg",
 		desc: "It is a interactive platform to teach kids alphabet.",
+		badge: "Cool",
+		tags: ["kids", "solar2d", "game"],
 	},
 	{
 		app: { name: "ihStudy", logoUrl: "vong" },

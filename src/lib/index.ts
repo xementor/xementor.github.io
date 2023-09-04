@@ -7,4 +7,6 @@ export type Project = {
 	}
 	filename: string
 	desc?: string
+	badge?: string
+	tags?: string[]
 }

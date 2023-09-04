@@ -15,14 +15,19 @@
 		<div class="card-body">
 			<h2 class="card-title">
 				{project.app.name}
-				<div class="badge badge-secondary">NEW</div>
+				{#if project.badge}
+					<div class="badge badge-secondary">{project.badge}</div>
+				{/if}
 			</h2>
 			<p>
 				{project.desc ? project.desc : "A demo description"}
 			</p>
 			<div class="card-actions justify-end">
-				<div class="badge badge-outline">solar2D</div>
-				<div class="badge badge-outline">Game</div>
+				{#if project.tags}
+					{#each project.tags as tag}
+						<div class="badge badge-outline">{tag}</div>
+					{/each}
+				{/if}
 			</div>
 		</div>
 	</a>
