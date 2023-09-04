@@ -11,7 +11,9 @@
 				designing) exceptional digital experiences. Currently, I’m focused on
 				building interactive study platform.
 			</p>
-			<button class="btn btn-primary">Get Started</button>
+			<button class="btn btn-primary"
+				><a href="#section2">Get Started</a></button
+			>
 		</div>
 	</div>
 </div>
