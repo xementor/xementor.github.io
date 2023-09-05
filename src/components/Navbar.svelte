@@ -4,7 +4,7 @@
 	import { Icon, Moon, Sun, Bars3CenterLeft } from "svelte-hero-icons"
 
 	// navbarStore.js
-	const lightThemeName = ["retro", "light"]
+	const lightThemeName = ["pastel", "retro", "light"]
 	const darkThemeName = ["dracula", "garden", "dark"]
 	const allThemes = {
 		all: [...lightThemeName, ...darkThemeName],
@@ -86,12 +86,16 @@
 			<ul
 				class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
 			>
-				{#each allThemes.all as t}
-					<li class:btn-active={t == theme}>
-						<button on:click={() => setTheme(t)}>{t}</button>
+				{#each allThemes.all as t, idx}
+					<li>
+						<button on:click={() => setTheme(t)} class:btn-active={t == theme}>
+							<Icon
+								src={idx > lightThemeName.length - 1 ? Moon : Sun}
+								size="15"
+							/>{t}</button
+						>
 					</li>
 				{/each}
-				<!-- <li><button on:click={() => setTheme("retro")}>Retro</button></li> -->
 			</ul>
 		</div>
 	</div>
