@@ -6,7 +6,7 @@
 </script>
 
 <Navbar />
-<div class="mx-5 md:mx-20">
+<div class="mx-2 sm:mx-5 md:mx-20">
 	<slot />
 </div>
 <IconMenu />
