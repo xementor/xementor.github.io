@@ -1,15 +1,17 @@
 <script lang="ts">
 	// Import the MyComponent
-	import { Icon } from "svelte-hero-icons"
 	import AboutMe from "../components/AboutMe.svelte"
 	import Blog from "../components/Blog.svelte"
 	import Contact from "../components/Contact.svelte"
 	import Hero from "../components/Hero.svelte"
-	import IconMenu from "../components/IconMenu.svelte"
-	import Navbar from "../components/Navbar.svelte"
 	import Project from "../components/Project.svelte"
 	import StepMenu from "../components/StepMenu.svelte"
 	import Work from "../components/Work.svelte"
+	import {
+		scrollToSection,
+		sections,
+		activeButtonIndex,
+	} from "../store/sectioin"
 </script>
 
 <div class="drawer drawer-end">
@@ -60,10 +62,19 @@
 	</div>
 	<div class="drawer-side z-20">
 		<label for="my-drawer-4" class="drawer-overlay" />
-		<ul class="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+		<ul
+			class="menu p-4 w-1/2 min-h-full bg-base-200 text-base-content flex flex-col justify-end"
+		>
 			<!-- Sidebar content here -->
-			<li><a href="#section1">Sidebar Item 1</a></li>
-			<li><a href="#section2">Sidebar Item 1</a></li>
+			{#each sections as section, index}
+				<li>
+					<button
+						on:click={() => scrollToSection(section.id, index)}
+						class:bg-base-300={index === $activeButtonIndex}
+						>{section.name}</button
+					>
+				</li>
+			{/each}
 		</ul>
 	</div>
 </div>
