@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { blogs } from "../db/postsdb"
+	import type { Blog } from "../db/postsdb"
 	import BlogCard from "./BlogCard.svelte"
+	export let blogs: Blog[]
 </script>
 
 <div class="hero">

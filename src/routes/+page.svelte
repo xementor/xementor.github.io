@@ -7,6 +7,7 @@
 	import Project from "../components/Project.svelte"
 	import StepMenu from "../components/StepMenu.svelte"
 	import Work from "../components/Work.svelte"
+	import { blogs } from "../db/postsdb"
 	import { projects } from "../db/projects"
 	import {
 		scrollToSection,
@@ -32,7 +33,7 @@
 			<Project {projects} />
 		</section>
 		<section id="section5">
-			<Blog />
+			<Blog {blogs} />
 		</section>
 		<section id="section6">
 			<Contact />
@@ -72,7 +73,7 @@
 					<button
 						on:click={() => scrollToSection(section.id, index)}
 						class:bg-base-300={index === $activeButtonIndex}
-						>{section.name}</button
+						>{index + 1 + ". " + section.name}</button
 					>
 				</li>
 			{/each}
