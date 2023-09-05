@@ -11,6 +11,7 @@ export const load: PageLoad = async () => {
 	try {
 		const url = baseUrl + "projects.json"
 		const response = await fetch(url)
+		console.log("server", response)
 
 		if (!response.ok) {
 			throw new Error(`HTTP error! Status: ${response.status}`)

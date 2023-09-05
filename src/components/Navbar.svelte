@@ -1,20 +1,25 @@
 <script lang="ts">
+	import { onMount } from "svelte"
 	import { autoClickedScrolled, canHideNavbar } from "../store/navhide"
+	import { preferences } from "../store/theme"
 	import Menu from "./Menu.svelte"
 	import { Icon, Moon, Sun, Bars3CenterLeft } from "svelte-hero-icons"
 
-	// navbarStore.js
-	const lightThemeName = ["pastel", "retro", "light"]
+	let theme = $preferences.theme
+	const lightThemeName = ["retro", "light", "pastel"]
 	const darkThemeName = ["dracula", "garden", "dark"]
 	const allThemes = {
 		all: [...lightThemeName, ...darkThemeName],
 		defaultLight: lightThemeName[0],
 		defaultDark: darkThemeName[0],
 	}
+	onMount(() => {
+		window.document.body.setAttribute("data-theme", theme)
+	})
 
 	let prevScrollpos = 0
 	let runnigY = 0
-	let theme = darkThemeName[0]
+	//  theme = darkThemeName[0]
 	$: active_class = $canHideNavbar ? "top-[-100px]" : "top-0"
 	$: icon = darkThemeName.includes(theme) ? Sun : Moon
 
@@ -22,10 +27,12 @@
 		theme = !darkThemeName.includes(theme)
 			? darkThemeName[0]
 			: lightThemeName[0]
+
+		preferences.set({ theme: theme })
 		window.document.body.setAttribute("data-theme", theme)
 	}
 	function setTheme(name: string) {
-		theme = name
+		preferences.set({ theme: name })
 		window.document.body.setAttribute("data-theme", name)
 	}
 

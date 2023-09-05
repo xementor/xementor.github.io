@@ -31,6 +31,7 @@
 	"type": "module",
 	"dependencies": {
 		"@giscus/svelte": "^2.3.0",
+		"svelte-local-storage-store": "^0.6.0",
 		"svelte-markdown": "^0.4.0"
 	}
 }

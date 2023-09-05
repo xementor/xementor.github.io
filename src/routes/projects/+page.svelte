@@ -2,6 +2,7 @@
 	import type { PageData } from "./$types"
 	import Project from "../../components/Project.svelte"
 	export let data: PageData
+	console.log("client", data)
 </script>
 
 {#if data.projects}
