@@ -1,7 +1,9 @@
 <div class="hero min-h-screen" id="section2">
 	<div class="hero-content flex-col md:flex-row max-w-4xl">
 		<div>
-			<h1 class="text-5xl font-bold">About Me</h1>
+			<h1 class="text-5xl font-bold">
+				<span class="text-primary">2.</span> About Me
+			</h1>
 			<p class="pt-6">
 				"Hello there! I'm Md. Zonaid, and I'm passionate about crafting internet
 				products through coding. My journey into the world of coding began in

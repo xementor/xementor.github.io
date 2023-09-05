@@ -38,7 +38,9 @@
 
 <div class="hero min-h-screen bg-base-400 justify-start md:justify-center">
 	<div class="p-4 md:w-[512px]">
-		<h2 class="text-4xl font-bold mb-10">My Work History</h2>
+		<h2 class="text-4xl font-bold mb-10">
+			<span class="text-primary">3.</span> My Work History
+		</h2>
 		<div class="tabs">
 			{#each workData as work, index}
 				<button

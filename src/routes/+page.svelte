@@ -7,6 +7,7 @@
 	import Project from "../components/Project.svelte"
 	import StepMenu from "../components/StepMenu.svelte"
 	import Work from "../components/Work.svelte"
+	import { projects } from "../db/projects"
 	import {
 		scrollToSection,
 		sections,
@@ -28,7 +29,7 @@
 			<Work />
 		</section>
 		<section id="section4">
-			<Project />
+			<Project {projects} />
 		</section>
 		<section id="section5">
 			<Blog />

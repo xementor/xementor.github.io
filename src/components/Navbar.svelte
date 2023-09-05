@@ -4,13 +4,6 @@
 	import { Icon, Moon, Sun, Bars3CenterLeft } from "svelte-hero-icons"
 
 	// navbarStore.js
-
-	let prevScrollpos = 0
-	let runnigY = 0
-	let theme = ""
-	$: active_class = $canHideNavbar ? "top-[-100px]" : "top-0"
-	$: icon = darkThemeName.includes(theme) ? Sun : Moon
-
 	const lightThemeName = ["retro", "light"]
 	const darkThemeName = ["dracula", "garden", "dark"]
 	const allThemes = {
@@ -18,6 +11,12 @@
 		defaultLight: lightThemeName[0],
 		defaultDark: darkThemeName[0],
 	}
+
+	let prevScrollpos = 0
+	let runnigY = 0
+	let theme = darkThemeName[0]
+	$: active_class = $canHideNavbar ? "top-[-100px]" : "top-0"
+	$: icon = darkThemeName.includes(theme) ? Sun : Moon
 
 	function toggle() {
 		theme = !darkThemeName.includes(theme)
