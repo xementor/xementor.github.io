@@ -1,11 +1,10 @@
 <script lang="ts">
 	import { onMount } from "svelte"
 	import { autoClickedScrolled, canHideNavbar } from "../store/navhide"
-	import { preferences } from "../store/theme"
+	import { theme } from "../store/theme"
 	import Menu from "./Menu.svelte"
 	import { Icon, Moon, Sun, Bars3CenterLeft } from "svelte-hero-icons"
 
-	let theme = $preferences.theme
 	const lightThemeName = ["retro", "light", "pastel"]
 	const darkThemeName = ["dracula", "garden", "dark"]
 	const allThemes = {
@@ -13,26 +12,21 @@
 		defaultLight: lightThemeName[0],
 		defaultDark: darkThemeName[0],
 	}
-	onMount(() => {
-		window.document.body.setAttribute("data-theme", theme)
-	})
 
 	let prevScrollpos = 0
 	let runnigY = 0
 	//  theme = darkThemeName[0]
 	$: active_class = $canHideNavbar ? "top-[-100px]" : "top-0"
-	$: icon = darkThemeName.includes(theme) ? Sun : Moon
+	$: icon = darkThemeName.includes($theme) ? Sun : Moon
 
 	function toggle() {
-		theme = !darkThemeName.includes(theme)
-			? darkThemeName[0]
-			: lightThemeName[0]
-
-		preferences.set({ theme: theme })
-		window.document.body.setAttribute("data-theme", theme)
+		theme.set(
+			!darkThemeName.includes($theme) ? darkThemeName[0] : lightThemeName[0]
+		)
+		window.document.body.setAttribute("data-theme", $theme)
 	}
 	function setTheme(name: string) {
-		preferences.set({ theme: name })
+		theme.set(name)
 		window.document.body.setAttribute("data-theme", name)
 	}
 
@@ -95,7 +89,7 @@
 			>
 				{#each allThemes.all as t, idx}
 					<li>
-						<button on:click={() => setTheme(t)} class:btn-active={t == theme}>
+						<button on:click={() => setTheme(t)} class:btn-active={t == $theme}>
 							<Icon
 								src={idx > lightThemeName.length - 1 ? Moon : Sun}
 								size="15"

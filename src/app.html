@@ -10,8 +10,13 @@
 </head>
 
 
+
 <body data-sveltekit-preload-data="hover">
+	<script>
+		window.document.body.setAttribute("data-theme", localStorage.theme.slice(1, -1))
+	</script>
 	<div style="display: contents">%sveltekit.body%</div>
 </body>
+
 
 </html>
