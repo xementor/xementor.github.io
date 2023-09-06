@@ -6,22 +6,30 @@
 </script>
 
 <li>
-	<a class="tooltip" data-tip="@xementor">
+	<a class="tooltip" data-tip="@xementor" href="https://github.com/xementor">
 		<Github />
 	</a>
 </li>
 <li>
-	<a class="tooltip" data-tip="@xementor">
-		<Instragram />
-	</a>
-</li>
-<li>
-	<a href="#" class="tooltip" data-tip="@xementor">
+	<a class="tooltip" data-tip="@ih_zonaid" href="https://twitter.com/ih_zonaid">
 		<Twitter />
 	</a>
 </li>
 <li>
-	<a href="#" class="tooltip" data-tip="@xementor">
+	<a
+		class="tooltip"
+		data-tip="ihzonaid"
+		href="https://www.linkedin.com/in/ihzonaid/"
+	>
 		<LinkedIn />
+	</a>
+</li>
+<li>
+	<a
+		class="tooltip"
+		data-tip="ih.zonaid"
+		href="https://www.instagram.com/ih.zonaid/"
+	>
+		<Instragram />
 	</a>
 </li>

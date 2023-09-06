@@ -3,7 +3,6 @@
 	import Project from "../../components/Project.svelte"
 	import Alert from "../../components/Alert.svelte"
 	export let data: PageData
-	console.log("client", data)
 </script>
 
 <div class=" min-h-screen">

@@ -44,7 +44,7 @@
 		</a>
 	</li>
 	<li>
-		<a href="#">
+		<a href="/resume">
 			Resume
 			<span class="badge badge-xs badge-info" />
 		</a>
