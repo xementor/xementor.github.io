@@ -1,16 +1,15 @@
 <script lang="ts">
 	import type { PageData } from "./$types"
 	import Project from "../../components/Project.svelte"
+	import Alert from "../../components/Alert.svelte"
 	export let data: PageData
 	console.log("client", data)
 </script>
 
-{#if data.projects}
-	<div class=" min-h-screen">
+<div class=" min-h-screen">
+	{#if data.projects}
 		<Project projects={data.projects} />
-	</div>
-{:else}
-	<div class=" min-h-screen">
-		<p>Data can't fetched</p>
-	</div>
-{/if}
+	{:else}
+		<Alert message={"Data couldn't fetched from server"} />
+	{/if}
+</div>

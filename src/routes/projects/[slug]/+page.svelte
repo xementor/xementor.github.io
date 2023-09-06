@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Alert from "../../../components/Alert.svelte"
 	import Comment from "../../../components/Comment.svelte"
 	import type { PageData } from "./$types"
 	export let data: PageData
@@ -7,9 +8,13 @@
 
 <div class="min-h-screen">
 	<div class="max-w-3xl mx-auto">
-		<article class="prose">
-			<SvelteMarkdown source={data.content} />
-		</article>
-		<Comment />
+		{#if data.content}
+			<article class="prose">
+				<SvelteMarkdown source={data.content} />
+			</article>
+			<Comment />
+		{:else}
+			<Alert message={"No data found"} />
+		{/if}
 	</div>
 </div>

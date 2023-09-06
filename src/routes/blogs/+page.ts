@@ -16,7 +16,6 @@ export const load: PageLoad = async () => {
 		}
 
 		const data = (await response.json()) as BlogJson
-		console.log(data)
 		return data
 	} catch (e) {
 		error(404, { message: `An error occurred: ${e}` })
