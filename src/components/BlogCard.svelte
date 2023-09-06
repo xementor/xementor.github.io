@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Blog } from "../db/postsdb"
+	import type { Blog } from "$lib/postsdb"
 	import {
 		Icon,
 		BookmarkSlash,

@@ -1,5 +1,4 @@
 import type { Project } from "$lib"
-
 export const projects: Project[] = [
 	{
 		app: { name: "ihABC", logoUrl: "vong" },

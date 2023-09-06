@@ -7,8 +7,8 @@
 	import Project from "../components/Project.svelte"
 	import StepMenu from "../components/StepMenu.svelte"
 	import Work from "../components/Work.svelte"
-	import { blogs } from "../db/postsdb"
-	import { projects } from "../db/projects"
+	import { blogs } from "$lib/postsdb"
+	import { projects } from "$lib/projects"
 	import {
 		scrollToSection,
 		sections,

@@ -1,4 +1,5 @@
-import type { Blog } from "../../db/postsdb"
+import { baseUrl } from "$lib/config"
+import type { Blog } from "../../lib/postsdb"
 import type { PageLoad } from "./$types"
 import { error } from "@sveltejs/kit"
 
@@ -6,10 +7,8 @@ export const load: PageLoad = async () => {
 	type BlogJson = {
 		blogs: Blog[]
 	}
-	const baseUrl =
-		"https://raw.githubusercontent.com/xementor/xementor.github.io/main/src/db/"
 	try {
-		const url = baseUrl + "blogs.json"
+		const url = baseUrl + "jsons/blogs.json"
 		const response = await fetch(url)
 
 		if (!response.ok) {
@@ -17,6 +16,7 @@ export const load: PageLoad = async () => {
 		}
 
 		const data = (await response.json()) as BlogJson
+		console.log(data)
 		return data
 	} catch (e) {
 		error(404, { message: `An error occurred: ${e}` })

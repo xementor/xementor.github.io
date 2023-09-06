@@ -1,4 +1,5 @@
 import type { Project } from "$lib"
+import { baseUrl } from "$lib/config"
 import type { PageLoad } from "./$types"
 import { error } from "@sveltejs/kit"
 
@@ -6,10 +7,9 @@ export const load: PageLoad = async () => {
 	type ProjectJson = {
 		projects: Project[]
 	}
-	const baseUrl =
-		"https://raw.githubusercontent.com/xementor/xementor.github.io/main/src/db/"
+
 	try {
-		const url = baseUrl + "projects.json"
+		const url = baseUrl + "jsons/projects.json"
 		const response = await fetch(url)
 		console.log("server", response)
 
