@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Blog } from "$lib/postsdb"
+	import { extractFileName } from "$lib/utils"
 	import {
 		Icon,
 		BookmarkSlash,
@@ -9,13 +10,14 @@
 	} from "svelte-hero-icons"
 
 	export let blog: Blog
+	const route = extractFileName(blog.filename)
 </script>
 
 <div
 	class="card w-full sm:w-72 bg-base-100 shadow-xl
 	 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-base-300 duration-300"
 >
-	<a href={"/blogs/" + blog.filename}>
+	<a href={"/blogs/" + route}>
 		<figure>
 			<img src={blog.thumbnail} alt="Shoes" class="w-96 h-52 object-cover" />
 		</figure>
@@ -23,7 +25,7 @@
 			<div>
 				<div class="avatar">
 					<div class="w-6 rounded-full">
-						<img src="ih.jpg" />
+						<img src="ih.jpg" alt="thumbnail" />
 					</div>
 					<p class="ml-3">Md. Zonaid</p>
 				</div>

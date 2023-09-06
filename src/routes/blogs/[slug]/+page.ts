@@ -1,10 +1,9 @@
 import { error } from "@sveltejs/kit"
 import type { PageLoad } from "./$types"
-import type { Blog } from "$lib/postsdb"
-import { baseUrl, blogBaseUrl } from "$lib/config"
+import { blogBaseUrl } from "$lib/config"
 
 export const load: PageLoad = async ({ params }) => {
-	const url = blogBaseUrl + params.slug
+	const url = blogBaseUrl + params.slug + ".md"
 	try {
 		const response = await fetch(url)
 
@@ -13,7 +12,6 @@ export const load: PageLoad = async ({ params }) => {
 		}
 
 		const data = (await response.text()) as String
-		console.log(data.length)
 		return {
 			content: data,
 		}

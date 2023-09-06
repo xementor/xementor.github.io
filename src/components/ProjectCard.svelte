@@ -1,14 +1,16 @@
 <script lang="ts">
 	import type { Project } from "$lib"
+	import { extractFileName } from "$lib/utils"
 
 	export let project: Project
+	const route = extractFileName(project.filename)
 </script>
 
 <div
 	class="card w-full sm:w-72 bg-base-100 shadow-xl
 	 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-100 hover:bg-base-300 duration-300"
 >
-	<a href={"/projects/" + project.filename}>
+	<a href={"/projects/" + route}>
 		<figure>
 			<img src={project.thumbnail} alt="Shoes" class="w-96 h-52 object-cover" />
 		</figure>
