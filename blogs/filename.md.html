@@ -20,7 +20,8 @@
 		<link rel="modulepreload" href="../_app/immutable/chunks/navhide.16964f8a.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/Icon.3c051534.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/spread.8a54911c.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/7.2dc0d346.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/2.f10e52e0.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/5.47c425ae.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/Alert.c5f9b6a9.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/SvelteMarkdown.02b5fd7a.js">
 </head>
@@ -54,14 +55,14 @@
 
 					const element = document.currentScript.parentElement;
 
-					const data = [null,null];
+					const data = [null,null,null];
 
 					Promise.all([
 						import("../_app/immutable/entry/start.b97d459b.js"),
 						import("../_app/immutable/entry/app.d53f1f01.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
-							node_ids: [0, 7],
+							node_ids: [0, 2, 5],
 							data,
 							form: null,
 							error: null
