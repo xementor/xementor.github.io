@@ -10,7 +10,7 @@
 <div class="min-h-screen">
 	<div class="max-w-3xl mx-auto">
 		<article class="prose">
-			<SvelteMarkdown source={data.content} />
+			<SvelteMarkdown source={"ami"} />
 		</article>
 		<Comment />
 	</div>

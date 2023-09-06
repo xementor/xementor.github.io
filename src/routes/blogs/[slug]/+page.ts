@@ -1,22 +1,25 @@
 import { error } from "@sveltejs/kit"
 import type { PageLoad } from "./$types"
-export const load: PageLoad = ({ params }) => {
-	return {
-		title: params.slug,
-		content: `
-  # This is a header
+import type { Blog } from "$lib/postsdb"
+import { baseUrl } from "$lib/config"
 
-This is a paragraph.
+export const load: PageLoad = async ({ params }) => {
+	type BlogJson = {
+		blogs: Blog[]
+	}
+	const url = baseUrl + "blogs/first-blog.md"
+	try {
+		const response = await fetch(url)
 
-* This is a list
-* With two items
-  1. And a sublist
-  2. That is ordered
-    * With another
-    * Sublist inside
+		if (!response.ok) {
+			throw new Error(`HTTP error! Status: ${response.status}`)
+		}
 
-| And this is | A table |
-|-------------|---------|
-| With two    | columns |`,
+		const data = (await response.text()) as String
+		console.log(data)
+		return data
+	} catch (e) {
+		console.log(e)
+		error(404, { message: `An error occurred: ${e}` })
 	}
 }

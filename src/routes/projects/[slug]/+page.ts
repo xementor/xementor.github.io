@@ -12,7 +12,7 @@ export const load: PageLoad = async ({ params }) => {
 			throw new Error(`HTTP error! Status: ${response.status}`)
 		}
 
-		const data = (await response.json()) as ProjectJson
+		const data = await response.json()
 		return data
 	} catch (e) {
 		error(404, { message: `An error occurred: ${e}` })
