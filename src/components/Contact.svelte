@@ -5,11 +5,15 @@
 				<span class="text-primary">6.</span> Get in Touch
 			</h1>
 			<p class="py-6">
-				Although I’m not currently looking for any new opportunities, my inbox
-				is always open. Whether you have a question or just want to say hi, I’ll
-				try my best to get back to you!
+				"While I'm actively seeking new opportunities, my inbox is always open.
+				Whether you have a job offer, a project proposal, or just want to
+				connect, please don't hesitate to reach out. I'm eager to explore new
+				challenges and collaborations, and I'll make sure to respond promptly to
+				your message. Let's connect and explore how we can work together!"
 			</p>
-			<button class="btn btn-primary">Send Hello</button>
+			<button class="btn btn-primary">
+				<a href="mailto:ahammmedzonaid@gmail.com">Send Hello</a></button
+			>
 		</div>
 	</div>
 </div>
