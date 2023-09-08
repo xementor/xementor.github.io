@@ -7,22 +7,27 @@
 	}
 	const workData: Work[] = [
 		{
-			company: "Action Tokens",
-			rule: "Backend Developer",
-			timeline: "May 2018 - Present",
-			contributions: [
-				"Builded transection of the steller API",
-				"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, est.",
-			],
-		},
-		{
 			company: "Nuna Art Project",
 			contributions: [
-				"lorem vong cong and dong",
-				"itls file to do that or thais",
+				"Designed and implemented API endpoints using Django for frontend users to request plot purchases.",
+				"Created a process within the API to collect user-selected pixel plot data and images and stored them in Firebase.",
+				"Implemented functionality to generate transaction IDs and interface with the Stellar API for transaction validation.",
 			],
-			rule: "Transection Builder",
+			rule: "Backend Developer",
 			timeline: "XXX to XXX",
+		},
+		{
+			company: "Action Tokens",
+			rule: "Transection Builder",
+			timeline: "XXXX - XXXX",
+			contributions: [
+				"Developed transaction functionality using the Stellar API for processing plot sale payments.",
+				"Integrated the Albedo extension to simplify user authentication and transaction signing.",
+				"Incorporated the Freight extension to enhance the user experience by streamlining transaction processing.",
+				"Integrated xbull to provide users with real-time market data and improve transaction decision-making.",
+				"Implemented WalletConnect to allow users to interact with the Stellar network using their preferred wallets.",
+				"Ensured seamless and secure transaction processing for plot sales within the system.",
+			],
 		},
 	]
 
@@ -36,8 +41,10 @@
 	}
 </script>
 
-<div class="hero min-h-screen bg-base-400 justify-start md:justify-center">
-	<div class="p-4 md:w-[512px]">
+<div
+	class="hero min-h-screen bg-base-400 justify-start md:justify-center items-start"
+>
+	<div class="p-4 md:w-[600px] mt-12">
 		<h2 class="text-4xl font-bold mb-10">
 			<span class="text-primary">3.</span> My Work History
 		</h2>
@@ -50,10 +57,10 @@
 				>
 			{/each}
 		</div>
-		<div class="my-5">
+		<div class="my-5 ml-2">
 			<h4 class="text-lg font-bold">{selectedWork.rule}</h4>
 			<p class="text-base font-light">{selectedWork.timeline}</p>
-			<ol class="py-2">
+			<ol class="py-2 list-decimal my-2 ml-3">
 				{#each selectedWork.contributions as contrib}
 					<li>{contrib}</li>
 				{/each}
