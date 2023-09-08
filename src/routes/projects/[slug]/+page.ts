@@ -3,7 +3,7 @@ import type { PageLoad } from "./$types"
 import { projectBaseUrl } from "$lib/config"
 
 export const load: PageLoad = async ({ params }) => {
-	const url = projectBaseUrl + params.slug + ".md"
+	const url = projectBaseUrl + params.slug + "/" + params.slug + ".md"
 	try {
 		const response = await fetch(url)
 
