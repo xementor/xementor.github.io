@@ -1,7 +1,10 @@
 import type { Project } from "$lib"
 export const projects: Project[] = [
 	{
-		app: { name: "ihABC", logoUrl: "vong" },
+		app: {
+			name: "ihABC",
+			logoUrl: "vong",
+		},
 		filename: "ihabc.md",
 		thumbnail: "project.jpg",
 		desc: "It is a interactive platform to teach kids alphabet.",
@@ -9,14 +12,11 @@ export const projects: Project[] = [
 		tags: ["kids", "solar2d", "game"],
 	},
 	{
-		app: { name: "ihStudy", logoUrl: "vong" },
+		app: {
+			name: "ihStudy",
+			logoUrl: "vong",
+		},
 		filename: "ihabc.md",
 		thumbnail: "project.jpg",
-	},
-	{
-		app: { name: "ami tmari premo vikari , amiake", logoUrl: "vong" },
-		filename: "ihabc.md",
-		thumbnail: "project.jpg",
-		desc: "It is a interactive platform to teach kids alphabet.It is a interactive platform to teach kids alphabet.",
 	},
 ]

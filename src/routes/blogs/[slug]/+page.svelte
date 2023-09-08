@@ -9,7 +9,7 @@
 <div class="min-h-screen">
 	<div class="max-w-3xl mx-auto">
 		{#if data.content}
-			<article class="prose">
+			<article class="prose mx-auto">
 				<SvelteMarkdown source={data.content} />
 			</article>
 			<Comment />

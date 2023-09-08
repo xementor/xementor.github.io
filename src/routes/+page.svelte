@@ -7,13 +7,13 @@
 	import Project from "../components/Project.svelte"
 	import StepMenu from "../components/StepMenu.svelte"
 	import Work from "../components/Work.svelte"
-	import { blogs } from "$lib/postsdb"
-	import { projects } from "$lib/projects"
 	import {
 		scrollToSection,
 		sections,
 		activeButtonIndex,
 	} from "../store/sectioin"
+	import { blogs } from "$lib/postsdb"
+	import { projects } from "$lib/projects"
 </script>
 
 <div class="drawer drawer-end">

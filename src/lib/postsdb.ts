@@ -10,22 +10,14 @@ type Blog = {
 
 const blogs: Blog[] = [
 	{
-		badge: "Cool",
+		badge: "New",
 		desc: "it is a short des",
-		filename: "filename.md",
-		tags: ["ami", "tmi"],
-		thumbnail: "project.jpg",
-		title: "vong",
-		date: "a",
-	},
-	{
-		badge: "Cool",
-		desc: "it is a short des",
-		filename: "filename.md",
-		tags: ["ami", "tmi"],
-		thumbnail: "project.jpg",
-		title: "vong",
-		date: "",
+		filename: "ihLang-compiler.md",
+		tags: ["ihLang", "Compiler Desing", "Python"],
+		thumbnail:
+			"https://raw.githubusercontent.com/xementor/xementor.github.io/main/db/blogs/ihLang-compiler/thumbnail.jpg",
+		title: "Simple Compiler design with code for (IhLang)",
+		date: "18 June 2023",
 	},
 ]
 
