@@ -4,6 +4,7 @@ import { blogBaseUrl } from "$lib/config"
 
 export const load: PageLoad = async ({ params }) => {
 	const url = blogBaseUrl + params.slug + ".md"
+	// let url = params.slug + ".md"
 	try {
 		const response = await fetch(url)
 
