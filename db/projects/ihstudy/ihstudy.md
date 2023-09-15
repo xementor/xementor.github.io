@@ -28,7 +28,11 @@ One of the core principles of ihStudy is providing a consistent and appealing us
 
 ## Screenshots and Visuals
 
-Coming soon! We'll provide you with a visual tour of ihStudy in action, showcasing the platform's intuitive user interface, interactive courses, and engaging quizzes.
+Here is the visual tour of ihStudy in action, showcasing the platform's intuitive user interface, interactive courses, and engaging quizzes.
+
+![course page](https://raw.githubusercontent.com/xementor/xementor.github.io/main/db/projects/ihstudy/ihstudy-web2.png)
+
+![course page](https://raw.githubusercontent.com/xementor/xementor.github.io/main/db/projects/ihstudy/ihstudy-web3.png)
 
 ## Conclusion
 

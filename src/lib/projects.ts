@@ -14,9 +14,13 @@ export const projects: Project[] = [
 	{
 		app: {
 			name: "ihStudy",
-			logoUrl: "vong",
+			logoUrl: "",
 		},
-		filename: "ihabc.md",
-		thumbnail: "project.jpg",
+		filename: "ihstudy.md",
+		thumbnail:
+			"https://raw.githubusercontent.com/xementor/xementor.github.io/main/db/projects/ihstudy/ihstudy-web.png",
+		desc: "Interctive learning platform",
+		badge: "New",
+		tags: ["redux", "react native", "nextjs"],
 	},
 ]
