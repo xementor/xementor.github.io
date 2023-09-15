@@ -3,7 +3,7 @@
     {
       "app": {
         "name": "ihABC",
-        "logoUrl": "vong"
+        "logoUrl": ""
       },
       "filename": "ihabc.md",
       "thumbnail": "project.jpg",
@@ -18,10 +18,11 @@
     {
       "app": {
         "name": "ihStudy",
-        "logoUrl": "vong"
+        "logoUrl": ""
       },
-      "filename": "ihabc.md",
-      "thumbnail": "project.jpg"
+      "desc": "Interective study platform",
+      "filename": "ihstudy.md",
+      "thumbnail": "ihstudy-web.png"
     }
   ]
 }
