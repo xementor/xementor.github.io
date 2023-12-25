@@ -1,5 +1,6 @@
 <script>
 	import Giscus from "@giscus/svelte"
+	import { lightThemeName, theme } from "../store/theme"
 </script>
 
 <Giscus
@@ -13,7 +14,7 @@
 	reactionsEnabled="1"
 	emitMetadata="0"
 	inputPosition="top"
-	theme="light"
+	theme={lightThemeName.includes($theme) ? "light" : "dark"}
 	lang="en"
 	loading="lazy"
 />

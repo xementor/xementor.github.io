@@ -1,17 +1,13 @@
 <script lang="ts">
-	import { onMount } from "svelte"
 	import { autoClickedScrolled, canHideNavbar } from "../store/navhide"
-	import { theme } from "../store/theme"
+	import {
+		darkThemeName,
+		theme,
+		lightThemeName,
+		allThemes,
+	} from "../store/theme"
 	import Menu from "./Menu.svelte"
 	import { Icon, Moon, Sun, Bars3CenterLeft } from "svelte-hero-icons"
-
-	const lightThemeName = ["retro", "light", "pastel"]
-	const darkThemeName = ["dracula", "garden", "dark"]
-	const allThemes = {
-		all: [...lightThemeName, ...darkThemeName],
-		defaultLight: lightThemeName[0],
-		defaultDark: darkThemeName[0],
-	}
 
 	let prevScrollpos = 0
 	let runnigY = 0
