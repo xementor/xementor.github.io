@@ -20,7 +20,27 @@ export const projects: Project[] = [
 		thumbnail:
 			"https://raw.githubusercontent.com/xementor/xementor.github.io/main/db/projects/ihstudy/ihstudy-web.png",
 		desc: "Interctive learning platform",
-		badge: "New",
 		tags: ["redux", "react native", "nextjs"],
+	},
+	{
+		app: {
+			name: "NftAudio",
+			logoUrl: "",
+		},
+		filename: "nft_music.md",
+		thumbnail:
+			"https://raw.githubusercontent.com/xementor/xementor.github.io/main/db/projects/nft_music/1.png",
+		desc: "Nft based audio platform",
+		badge: "New",
+		tags: ["nextjs", "stellar", "nft"],
+	},
+	{
+		app: { name: "NftMarketplace", logoUrl: "" },
+		filename: "nft_marketplace",
+		desc: "Nft based marketplace for media",
+		thumbnail:
+			"https://raw.githubusercontent.com/xementor/xementor.github.io/main/db/projects/nft_marketplace/1.png",
+		badge: "New",
+		tags: ["nextjs", "stellar", "nft"],
 	},
 ]
