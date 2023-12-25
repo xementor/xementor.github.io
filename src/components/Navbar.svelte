@@ -66,13 +66,13 @@
 		</div>
 	</div>
 	<div class="navbar-end">
-		<div class="hidden sm:form-control">
+		<!-- <div class="hidden sm:form-control">
 			<input
 				type="text"
 				placeholder="Search"
 				class="input input-bordered w-24 md:w-auto"
 			/>
-		</div>
+		</div> -->
 
 		<div class="dropdown dropdown-end dropdown-hover">
 			<button class="btn btn-ghost btn-circle" on:click={toggle}>
