@@ -36,7 +36,7 @@ export const projects: Project[] = [
 	},
 	{
 		app: { name: "NftMarketplace", logoUrl: "" },
-		filename: "nft_marketplace",
+		filename: "nft_marketplace.md",
 		desc: "Nft based marketplace for media",
 		thumbnail:
 			"https://raw.githubusercontent.com/xementor/xementor.github.io/main/db/projects/nft_marketplace/1.png",
