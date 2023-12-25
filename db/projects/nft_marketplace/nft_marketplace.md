@@ -58,8 +58,8 @@ A significant integration involved handling transactions in Stellar to change tr
 
 ### Screenshots/Demo
 
-![home page](https://raw.githubusercontent.com/xementor/xementor.github.io/main/db/projects/nft_music/1.png)
-![home page](https://raw.githubusercontent.com/xementor/xementor.github.io/main/db/projects/nft_music/2.png)
+![home page](https://raw.githubusercontent.com/xementor/xementor.github.io/main/db/projects/nft_marketplace/1.png)
+![home page](https://raw.githubusercontent.com/xementor/xementor.github.io/main/db/projects/nft_marketplace/2.png)
 
 ### Live Website
 
