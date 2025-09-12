@@ -136,7 +136,9 @@
           </h3>
           <div class="space-y-3 text-sm sm:text-base text-gray-900">
             <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900">Age:</span>
+              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
+                >Age:</span
+              >
               <span class="text-gray-900">25 years</span>
             </div>
             <div class="flex flex-wrap">
@@ -146,11 +148,15 @@
               <span class="text-gray-900">August 1, 2000</span>
             </div>
             <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900">Height:</span>
+              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
+                >Height:</span
+              >
               <span class="text-gray-900">5 feet 5 inches</span>
             </div>
             <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900">Weight:</span>
+              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
+                >Weight:</span
+              >
               <span class="text-gray-900">67 kg</span>
             </div>
             <div class="flex flex-wrap">
@@ -160,11 +166,15 @@
               <span class="text-gray-900">Kishoreganj, Bangladesh</span>
             </div>
             <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900">Nationality:</span>
+              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
+                >Nationality:</span
+              >
               <span class="text-gray-900">Bangladeshi</span>
             </div>
             <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900">Religion:</span>
+              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
+                >Religion:</span
+              >
               <span class="text-gray-900">Islam</span>
             </div>
           </div>
@@ -201,21 +211,29 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div class="space-y-3 text-sm sm:text-base">
           <div class="flex flex-wrap">
-            <span class="font-semibold w-32 flex-shrink-0 text-gray-900">Father's Name:</span>
+            <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
+              >Father's Name:</span
+            >
             <span class="text-gray-900">Md. Farok Mia</span>
           </div>
           <div class="flex flex-wrap">
-            <span class="font-semibold w-32 flex-shrink-0 text-gray-900">Mother's Name:</span>
+            <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
+              >Mother's Name:</span
+            >
             <span class="text-gray-900">Fetema Akter</span>
           </div>
         </div>
         <div class="space-y-3 text-sm sm:text-base">
           <div class="flex flex-wrap">
-            <span class="font-semibold w-32 flex-shrink-0 text-gray-900">Siblings:</span>
+            <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
+              >Siblings:</span
+            >
             <span class="text-gray-900">3 Brothers, 2 Sisters</span>
           </div>
           <div class="flex flex-wrap">
-            <span class="font-semibold w-32 flex-shrink-0 text-gray-900">Position:</span>
+            <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
+              >Position:</span
+            >
             <span class="text-gray-900">Youngest child</span>
           </div>
         </div>
@@ -242,11 +260,17 @@
             class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-base"
           >
             <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900">Institution:</span>
-              <span class="text-gray-900">Daffodil International University</span>
+              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
+                >Institution:</span
+              >
+              <span class="text-gray-900"
+                >Daffodil International University</span
+              >
             </div>
             <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900">Duration:</span>
+              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
+                >Duration:</span
+              >
               <span class="text-gray-900">2020-2024</span>
             </div>
           </div>
@@ -261,15 +285,23 @@
             class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-base"
           >
             <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900">Institution:</span>
-              <span class="text-gray-900">Gurudayal Govt. College, Kishoreganj</span>
+              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
+                >Institution:</span
+              >
+              <span class="text-gray-900"
+                >Gurudayal Govt. College, Kishoreganj</span
+              >
             </div>
             <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900">Board:</span>
+              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
+                >Board:</span
+              >
               <span class="text-gray-900">Dhaka</span>
             </div>
             <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900">Year:</span>
+              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
+                >Year:</span
+              >
               <span class="text-gray-900">2019</span>
             </div>
           </div>
