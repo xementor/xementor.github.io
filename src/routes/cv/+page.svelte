@@ -4,13 +4,17 @@
   onMount(() => {
     document.title = "CV - Md. Zonaid";
   });
+
+  function handlePrint() {
+    window.print();
+  }
 </script>
 
 <svelte:head>
   <title>CV - Md. Zonaid</title>
   <meta
     name="description"
-    content="Professional CV of Md. Zonaid - Software Developer"
+    content="Professional CV of Md. Zonaid - Software Engineer"
   />
 </svelte:head>
 
@@ -27,9 +31,9 @@
 </header> -->
 
 <div
-  class="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 py-8 px-4 sm:px-6 lg:px-8"
+  class="min-h-screen bg-gradient-to-br from-orange-50 to-orange-100 py-0 sm:py-8 px-0 sm:px-4 lg:px-8 coding-bg"
 >
-  <div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-lg overflow-hidden">
+  <div class="max-w-5xl mx-auto bg-white shadow-none sm:shadow-2xl rounded-none sm:rounded-lg overflow-hidden print:shadow-none print:rounded-none">
     <!-- Header Section -->
     <div
       class="bg-gradient-to-r from-orange-500 to-orange-600 text-white p-6 sm:p-8"
@@ -50,7 +54,7 @@
             MD. ZONAID
           </h1>
           <h2 class="text-xl sm:text-2xl font-light mb-4 opacity-90">
-            Software Developer
+            Software Engineer
           </h2>
 
           <!-- Contact Info -->
@@ -96,36 +100,60 @@
     </div>
 
     <!-- Work Experience Section -->
-    <div class="p-6 sm:p-8 border-b border-gray-200">
+    <div class="px-4 py-6 sm:p-8 border-b border-gray-200">
       <h3
         class="text-xl font-bold text-orange-600 mb-6 border-b-2 border-orange-200 pb-2"
       >
         WORK EXPERIENCE
       </h3>
 
-      <div class="bg-orange-50 p-4 sm:p-6 rounded-lg">
-        <div
-          class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3"
-        >
-          <h4 class="font-bold text-lg text-gray-800">Software Developer</h4>
-          <span class="text-orange-600 font-semibold text-sm"
-            >Mid 2024 - Present</span
+      <div class="space-y-6">
+        <!-- Current Full-time Position -->
+        <div class="bg-orange-50 p-4 sm:p-6 rounded-lg">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3"
           >
+            <h4 class="font-bold text-lg text-gray-800">Software Engineer</h4>
+            <span class="text-orange-600 font-semibold text-sm"
+              >Mid 2024 - Present</span
+            >
+          </div>
+          <div class="text-gray-700 mb-3">
+            <div class="font-semibold">Action Work LLC</div>
+            <div class="text-sm text-gray-600">Remote • Full-time Position</div>
+          </div>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Working as a remote Software Engineer, contributing to various
+            projects and applications. Developing and maintaining software
+            solutions using modern technologies and best practices.
+          </p>
         </div>
-        <div class="text-gray-700 mb-3">
-          <div class="font-semibold">Action Work LLC</div>
-          <div class="text-sm text-gray-600">Remote • Contract Position</div>
+
+        <!-- Freelance Experience -->
+        <div class="bg-gray-50 p-4 sm:p-6 rounded-lg">
+          <div
+            class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3"
+          >
+            <h4 class="font-bold text-lg text-gray-800">Software Developer</h4>
+            <span class="text-orange-600 font-semibold text-sm"
+              >2023 - Mid 2024</span
+            >
+          </div>
+          <div class="text-gray-700 mb-3">
+            <div class="font-semibold">Independent Projects</div>
+            <div class="text-sm text-gray-600">Project-based Development</div>
+          </div>
+          <p class="text-gray-700 text-sm leading-relaxed">
+            Worked on various software development projects while completing
+            B.Sc degree. Developed web applications and software solutions for clients,
+            gaining practical experience in full-stack development and project management.
+          </p>
         </div>
-        <p class="text-gray-700 text-sm leading-relaxed">
-          Working as a remote software developer, contributing to various
-          projects and applications. Developing and maintaining software
-          solutions using modern technologies and best practices.
-        </p>
       </div>
     </div>
 
     <!-- Personal Information Section -->
-    <div class="p-6 sm:p-8 border-b border-gray-200">
+    <div class="px-4 py-6 sm:p-8 border-b border-gray-200">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <!-- Left Column -->
         <div>
@@ -188,7 +216,7 @@
             ABOUT ME
           </h3>
           <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
-            I am Md. Zonaid, a 25-year-old software developer from Kishoreganj,
+            I am Md. Zonaid, a 25-year-old Software Engineer from Kishoreganj,
             Bangladesh. I graduated with a B.Sc in Computer Science and
             Engineering in 2024 and currently work remotely as a software
             developer at Action Work LLC. I'm passionate about coding, learning
@@ -201,7 +229,7 @@
     </div>
 
     <!-- Family Information Section -->
-    <div class="p-6 sm:p-8 border-b border-gray-200">
+    <div class="px-4 py-6 sm:p-8 border-b border-gray-200">
       <h3
         class="text-xl font-bold text-orange-600 mb-6 border-b-2 border-orange-200 pb-2"
       >
@@ -241,7 +269,7 @@
     </div>
 
     <!-- Academic Qualification Section -->
-    <div class="p-6 sm:p-8 border-b border-gray-200">
+    <div class="px-4 py-6 sm:p-8 border-b border-gray-200">
       <h3
         class="text-xl font-bold text-orange-600 mb-6 border-b-2 border-orange-200 pb-2"
       >
@@ -251,58 +279,81 @@
       <div class="space-y-6">
         <!-- B.Sc in CSE -->
         <div class="bg-orange-50 p-4 sm:p-6 rounded-lg">
-          <h4 class="font-bold text-lg text-gray-800 mb-3">
+          <h4 class="font-bold text-lg text-gray-800 mb-4">
             B.Sc in Computer Science and Engineering <span
               class="text-orange-600">(Graduate)</span
             >
           </h4>
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-base"
-          >
-            <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
-                >Institution:</span
-              >
-              <span class="text-gray-900"
-                >Daffodil International University</span
-              >
+          <div class="space-y-2 text-sm sm:text-base">
+            <div class="flex">
+              <span class="font-semibold w-36 text-gray-900">Institution:</span>
+              <span class="text-gray-900 flex-1">Daffodil International University</span>
             </div>
-            <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
-                >Duration:</span
-              >
-              <span class="text-gray-900">2020-2024</span>
+            <div class="flex">
+              <span class="font-semibold w-36 text-gray-900">Duration:</span>
+              <span class="text-gray-900 flex-1">2020-2024</span>
+            </div>
+            <div class="flex">
+              <span class="font-semibold w-36 text-gray-900">Result:</span>
+              <span class="text-gray-900 flex-1">CGPA 3.83 out of 4.00</span>
             </div>
           </div>
         </div>
 
         <!-- HSC -->
         <div class="bg-gray-50 p-4 sm:p-6 rounded-lg">
-          <h4 class="font-bold text-lg text-gray-800 mb-3">
+          <h4 class="font-bold text-lg text-gray-800 mb-4">
             Higher Secondary Certificate (HSC)
           </h4>
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-base"
-          >
-            <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
-                >Institution:</span
-              >
-              <span class="text-gray-900"
-                >Gurudayal Govt. College, Kishoreganj</span
-              >
+          <div class="space-y-2 text-sm sm:text-base">
+            <div class="flex">
+              <span class="font-semibold w-36 text-gray-900">Institution:</span>
+              <span class="text-gray-900 flex-1">Gurudayal Govt. College, Kishoreganj</span>
             </div>
-            <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
-                >Board:</span
-              >
-              <span class="text-gray-900">Dhaka</span>
+            <div class="flex">
+              <span class="font-semibold w-36 text-gray-900">Board:</span>
+              <span class="text-gray-900 flex-1">Dhaka</span>
             </div>
-            <div class="flex flex-wrap">
-              <span class="font-semibold w-32 flex-shrink-0 text-gray-900"
-                >Year:</span
-              >
-              <span class="text-gray-900">2019</span>
+            <div class="flex">
+              <span class="font-semibold w-36 text-gray-900">Year:</span>
+              <span class="text-gray-900 flex-1">2019</span>
+            </div>
+            <div class="flex">
+              <span class="font-semibold w-36 text-gray-900">Group:</span>
+              <span class="text-gray-900 flex-1">Science</span>
+            </div>
+            <div class="flex">
+              <span class="font-semibold w-36 text-gray-900">Result:</span>
+              <span class="text-gray-900 flex-1">GPA 5.00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SSC -->
+        <div class="bg-orange-50 p-4 sm:p-6 rounded-lg">
+          <h4 class="font-bold text-lg text-gray-800 mb-4">
+            Secondary School Certificate (SSC)
+          </h4>
+          <div class="space-y-2 text-sm sm:text-base">
+            <div class="flex">
+              <span class="font-semibold w-36 text-gray-900">Institution:</span>
+              <span class="text-gray-900 flex-1">Bhatia High School</span>
+            </div>
+            <div class="flex">
+              <span class="font-semibold w-36 text-gray-900">Board:</span>
+              <span class="text-gray-900 flex-1">Dhaka</span>
+            </div>
+            <div class="flex">
+              <span class="font-semibold w-36 text-gray-900">Year:</span>
+              <span class="text-gray-900 flex-1">2016</span>
+            </div>
+            <div class="flex">
+              <span class="font-semibold w-36 text-gray-900">Group:</span>
+              <span class="text-gray-900 flex-1">Science</span>
+            </div>
+            <div class="flex">
+              <span class="font-semibold w-36 text-gray-900">Result:</span>
+              <span class="text-gray-900 flex-1">GPA 5.00</span>
             </div>
           </div>
         </div>
@@ -311,20 +362,97 @@
 
     <!-- Footer -->
     <div class="bg-gray-50 p-4 text-center text-sm text-gray-600">
-      <p>© 2025 Md. Zonaid. All rights reserved.</p>
+      <p>© 2026 Md. Zonaid. All rights reserved.</p>
     </div>
+  </div>
+
+  <!-- Print Button at Bottom -->
+  <div class="max-w-5xl mx-auto mt-6 flex justify-center print:hidden">
+    <button
+      on:click={handlePrint}
+      class="flex items-center gap-2 bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-lg shadow-lg transition-colors duration-200"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+      </svg>
+      Print CV
+    </button>
   </div>
 </div>
 
 <style>
-  /* Additional custom styles if needed */
+  /* Coding background pattern */
+  .coding-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23f97316' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
   @media print {
-    .min-h-screen {
-      min-height: auto;
+    /* Hide browser default headers and footers (date, title, page numbers) */
+    @page {
+      margin: 0;
+      size: auto;
     }
 
-    .bg-gradient-to-br {
+    /* Remove background and reset layout */
+    .min-h-screen {
+      min-height: auto;
       background: white !important;
+      padding: 0 !important;
+    }
+
+    .bg-gradient-to-br,
+    .coding-bg {
+      background: white !important;
+      background-image: none !important;
+    }
+
+    /* Hide print button */
+    .print\:hidden {
+      display: none !important;
+    }
+
+    /* Remove shadows and rounded corners */
+    .print\:shadow-none {
+      box-shadow: none !important;
+    }
+
+    .print\:rounded-none {
+      border-radius: 0 !important;
+    }
+
+    /* Optimize page breaks */
+    .bg-orange-50,
+    .bg-gray-50 {
+      page-break-inside: avoid;
+      break-inside: avoid;
+    }
+
+    /* Ensure colors print properly */
+    * {
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Adjust header for print */
+    .bg-gradient-to-r {
+      background: linear-gradient(to right, #f97316, #ea580c) !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Remove footer margin */
+    body {
+      margin: 0;
+    }
+
+    /* Optimize spacing for print */
+    .p-6,
+    .p-8 {
+      padding: 1rem !important;
+    }
+
+    .sm\:p-8 {
+      padding: 1rem !important;
     }
   }
 </style>
