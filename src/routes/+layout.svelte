@@ -1,16 +1,12 @@
 <script lang="ts">
+  import { page } from "$app/stores";
   import "../app.css";
   import Footer from "../components/Footer.svelte";
-  import IconMenu from "../components/StickyMenu.svelte";
   import Navbar from "../components/Navbar.svelte";
-  import Github from "../components/social-icon/Github.svelte";
-  import Instragram from "../components/social-icon/Instragram.svelte";
-  import Twitter from "../components/social-icon/Twitter.svelte";
-  import LinkedIn from "../components/social-icon/LinkedIn.svelte";
   import SocialIcons from "../components/SocialIcons.svelte";
-  import { page } from "$app/stores";
+  import IconMenu from "../components/StickyMenu.svelte";
 
-  $: isCV = $page.route?.id === "/cv";
+  $: isCV = $page.route?.id === "/cv" || $page.route?.id === "/cv-tech";
 </script>
 
 {#if !isCV}
